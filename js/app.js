@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleFormSubmit);
+  const deleteForm = document.querySelector('#delete-form');
+  deleteForm.addEventListener('submit', handleDelete);
 
 });
 
@@ -42,4 +44,12 @@ const handleFormSubmit = function (event) {
   newBookCategory.textContent = `Category: ${newBook.category}`;
   newBookDiv.appendChild(newBookCategory);
 
+};
+
+const handleDelete = function(){
+  event.preventDefault();
+  const readingList = document.querySelector('#reading-list');
+  while (readingList.firstChild){
+    readingList.removeChild(readingList.firstChild);
+  };
 };
