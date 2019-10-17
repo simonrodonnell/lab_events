@@ -1,0 +1,18 @@
+body {
+  font-family: Palatino;
+  background-color: dodgerblue;
+}
+
+#reading-list {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  border: solid thin;
+  border-radius: 10px;
+  background-color: salmon;
+  padding: 10px;
+  margin: 20px;
+}
